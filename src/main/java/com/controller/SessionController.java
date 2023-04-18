@@ -17,7 +17,7 @@ public class SessionController {
 	@Autowired
 	userDAO dao;
 
-	@RequestMapping(method = RequestMethod.POST , value = "/signup")
+	@RequestMapping(method = RequestMethod.POST , value = "/signup") 
 //	public String signup()
 	public UserBean signup(@RequestBody UserBean bean)
 	{
@@ -26,6 +26,7 @@ public class SessionController {
 		dao.addUser(bean);
 		return bean;
 	}
+	
 	
 	
 	
