@@ -1,0 +1,66 @@
+1 - 1 
+
+
+user1:1 
+	x	
+	x	
+	x	
+role 1:M 
+	admin
+	hr
+	pm
+	
+	
+	
+Product
+1:M
+
+Cart 
+1:M
+	
+M:M
+
+
+
+Order1:M 
+1     15 50000 pending 
+
+OrderDetail 1:1 
+	10000 
+	20000 
+	20000
+	
+	
+	
+User 
+
+Insurance 
+
+------------------------------------------
+1-1
+user 
+
+address
+
+-----
+1-M
+
+employee
+
+department
+
+------
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

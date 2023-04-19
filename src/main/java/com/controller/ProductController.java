@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +29,7 @@ public class ProductController {
 	}
 
 	@GetMapping("/product")
-	public List<ProductEntity> getAllProducts() {
+ 	public List<ProductEntity> getAllProducts() {
 		return productRepository.findAll();
 	}
 
@@ -57,4 +58,18 @@ public class ProductController {
 		return productEntity;
 	}
 
+	//productId11 price 10000 , name iPhone  
+	
+	@PutMapping("/product")
+	public ProductEntity updateProduct(@RequestBody ProductEntity productEntity) {
+		productRepository.save(productEntity);//insert update 
+		
+		return productEntity;
+	}
+	
+	//search ->get | post  
+	//startDate endDate status  > price 10 information 
+	
+	
+	
 }

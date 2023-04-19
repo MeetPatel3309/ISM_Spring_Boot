@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.bean.UserBean;
 
 @Repository
-public class userDAO {
+public class UserDao {
 	
 	@Autowired
 	JdbcTemplate stmt ;

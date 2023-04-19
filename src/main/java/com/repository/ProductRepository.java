@@ -9,8 +9,14 @@ import com.entity.ProductEntity;
 
 @Repository
 public interface ProductRepository extends CrudRepository<ProductEntity, Integer>{
+	
 	List<ProductEntity> findAll();
+	
 	List<ProductEntity> findByName(String name);
+	
+	//findByPrice()
+	
+	//findByXXXXX()
 }
 
 

@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bean.UserBean;
-import com.dao.userDAO;
+import com.dao.UserDao;
 
 @RestController
 public class SessionController {
 	
 	@Autowired
-	userDAO dao;
+	UserDao dao;
 
 	@RequestMapping(method = RequestMethod.POST , value = "/signup") 
 //	public String signup()
