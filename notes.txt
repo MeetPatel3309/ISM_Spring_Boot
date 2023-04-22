@@ -50,7 +50,77 @@ employee
 department
 
 ------
+M-M
 
+Student
+
+Course
+
+
+many to many 
+
+student 
+
+sid   sname address 
+1	x    ahd		
+2	y    surat
+3	z    ahd 
+
+
+course 
+cid   cname 
+1	C
+2	c++
+3	Java
+4	Python 
+
+
+
+course_student	
+studentId courseId
+1     		1
+2     		1
+3     		4
+1   		2
+1    		3 
+
+
+1) Student
+
+2) Course
+
+3) StudentCourse
+
+
+
+@Entity 
+@Table(name="students")
+class Student {
+
+    @Id
+    @GeneratedValue
+   Integer studentId;
+	X
+	X
+
+   @ManyToMany
+   @JoinTable(name="course_student",joinColumns=@JoinColumn(name="studentId"),inverseJoinColumns=@JoinColumn(name="courseId"))
+   Set<Course> courses; 	
+
+}
+
+@JoinTable -> bridgeTable -> third table 
+
+
+@E
+@T
+class Course{
+   @Id
+   Integer courseId;
+   Stirng counrseName; 
+	
+    @ManyToMany 
+    Set<Student> students;
 
 
 
